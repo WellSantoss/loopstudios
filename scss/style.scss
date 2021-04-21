@@ -1,6 +1,5 @@
 @import 'reset';
 @import 'var-mix';
-@import 'reset';
 
 // geral
 body {
@@ -33,6 +32,14 @@ header {
     padding: 40px 30px 30px 30px;
     max-width: 650px;
     margin-top: 130px;
+    @include responsive(md){
+      font-size: 60px;
+      max-width: 480px;
+    }
+    @include responsive(sm){
+      font-size: 36px;
+      max-width: 480px;
+    }
   }
 }
 
@@ -40,6 +47,61 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  [data-menu="button"] {
+    display: none;
+  }
+  @include responsive(md) {
+    div {
+      position: relative;
+      ul {
+        display: none;
+        width: 200px;
+        text-align: center;
+        &.active {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          right: 0;
+          background: $black;
+        }
+        a {
+          margin: 5px 0;
+        }
+      }
+    }
+    [data-menu="button"] {
+      display: block;
+      border: none;
+      outline: none;
+      background-color: transparent;
+    }
+  }
+  @include responsive(sm) {
+    div {
+      position: relative;
+      ul {
+        display: none;
+        width: 200px;
+        text-align: center;
+        &.active {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          right: 0;
+          background: $black;
+        }
+        a {
+          margin: 5px 0;
+        }
+      }
+    }
+    [data-menu="button"] {
+      display: block;
+      border: none;
+      outline: none;
+      background-color: transparent;
+    }
+  }
   ul {
     display: flex;
     li {
@@ -68,26 +130,60 @@ header {
 
 // sections
 .vr {
-  padding: 150px 0;
   display: flex;
   align-items: flex-end;
   position: relative;
+  padding: 150px 0;
+  
   h2 {
     font-size: 48px;
     margin-bottom: 25px;
   }
   .content {
-    flex: 1;
     max-width: 530px;
     background: $white;
     position: absolute;
     right: 0px;
-    padding-left: 80px;
-    padding-top: 80px;
-
+    padding: 80px 0 0 80px;
+    @include responsive(lg) {
+      padding: 30px 0 0 30px;
+    }
     p {
       color: $dark-gray;
       line-height: 26px;
+    }
+  }
+  @include responsive(md) {
+    display: block;
+    position: static;
+    text-align: center;
+    max-width: calc(100% - 80px);
+    margin: 0 auto;
+    h2 {
+      font-size: 36px;
+    }
+    .content {
+      max-width: 300px;
+      position: static;
+      right: auto;
+      margin: 0 auto;
+      padding: 80px 0 0 0;
+    }
+  }
+  @include responsive(sm) {
+    display: block;
+    position: static;
+    text-align: center;
+    max-width: calc(100% - 80px);
+    h2 {
+      font-size: 36px;
+    }
+    .content {
+      max-width: 300px;
+      position: static;
+      right: auto;
+      margin: 0 auto;
+      padding: 80px 0 0 0;
     }
   }
 }
@@ -114,6 +210,20 @@ header {
         transition: background .3s;
       }
     }
+    @include responsive(md) {
+      flex-direction: column;
+      h2 {
+        font-size: 36px;
+        margin-bottom: 30px;
+      }
+    }
+    @include responsive(sm) {
+      flex-direction: column;
+      h2 {
+        font-size: 36px;
+        margin-bottom: 30px;
+      }
+    }
   }
   .content {
     @for $i from 1 through 8 {
@@ -133,6 +243,18 @@ header {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
+      @include responsive(xl) {
+        justify-content: center;
+        a {
+          margin: 24px 12px 0 12px;
+        }
+      }
+      @include responsive(lg) {
+        justify-content: center;
+        a {
+          margin: 24px 12px 0 12px;
+        }
+      }
     }
     a {
       display: block;
@@ -142,8 +264,26 @@ header {
       display: flex;
       align-items: flex-end;
       padding: 30px 35px;
+      @include responsive(md) {
+        width: calc(100% - 80px);
+        height: 170px;
+        margin-left: auto;
+        margin-right: auto;
+        h3 {
+          max-width: 250px;
+        }
+      }
+      @include responsive(sm) {
+        width: calc(100% - 80px);
+        height: 170px;
+        padding: 20px 25px;
+        margin-left: auto;
+        margin-right: auto;
+        h3 {
+          max-width: 250px;
+        }
+      }
     }
-
     h3 {
       font-family: 'Josefin Sans', sans-serif;
       color: $white;
@@ -195,13 +335,51 @@ footer {
       p {
         color: $very-dark-gray;
       }
+    } 
+    @include responsive(md) {
+      display: block;
+      .f-1, .f-2 {
+        display: block;
+        text-align: center;
+      }
+      .f-1 {
+        .logo img {
+          margin: 0 auto;
+          margin-bottom: 30px;
+        }
+      }
+      .f-2 {
+        ul {
+          display: block;
+          margin: 20px 0 30px 0;
+        }
+      } 
+    }
+    @include responsive(sm) {
+      display: block;
+      .f-1, .f-2 {
+        display: block;
+        text-align: center;
+      }
+      .f-1 {
+        .logo img {
+          margin: 0 auto;
+          margin-bottom: 30px;
+        }
+      }
+      .f-2 {
+        ul {
+          display: block;
+          margin: 20px 0 30px 0;
+        }
+      } 
     }
   }
 }
 
-
-
-
-
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution { 
+  font-size: 11px; text-align: center; 
+}
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}

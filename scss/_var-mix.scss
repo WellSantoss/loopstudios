@@ -4,7 +4,26 @@ $black: hsl(0, 0%, 0%);
 $dark-gray: hsl(0, 0%, 55%);
 $very-dark-gray: hsl(0, 0%, 41%);
 
-// Estilos
-
-
 // Responsivo
+@mixin responsive($size) {
+  @if $size == xl{
+    @media screen and (min-width: 992px) and (max-width: 1200px) {
+      @content;
+    }
+  }
+  @else if $size == lg{
+    @media screen and (min-width: 768px) and (max-width: 991px) {
+      @content;
+    }
+  }
+  @else if $size == md{
+    @media screen and (min-width: 576px) and (max-width: 767px) {
+      @content;
+    }
+  }
+  @else if $size == sm{
+    @media screen and (max-width: 575px) {
+      @content;
+    }
+  }
+}

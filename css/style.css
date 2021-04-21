@@ -96,6 +96,20 @@ header h1 {
   margin-top: 130px;
 }
 
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  header h1 {
+    font-size: 60px;
+    max-width: 480px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  header h1 {
+    font-size: 36px;
+    max-width: 480px;
+  }
+}
+
 .menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -106,6 +120,74 @@ header h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.menu [data-menu="button"] {
+  display: none;
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .menu div {
+    position: relative;
+  }
+  .menu div ul {
+    display: none;
+    width: 200px;
+    text-align: center;
+  }
+  .menu div ul.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    right: 0;
+    background: black;
+  }
+  .menu div ul a {
+    margin: 5px 0;
+  }
+  .menu [data-menu="button"] {
+    display: block;
+    border: none;
+    outline: none;
+    background-color: transparent;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .menu div {
+    position: relative;
+  }
+  .menu div ul {
+    display: none;
+    width: 200px;
+    text-align: center;
+  }
+  .menu div ul.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    right: 0;
+    background: black;
+  }
+  .menu div ul a {
+    margin: 5px 0;
+  }
+  .menu [data-menu="button"] {
+    display: block;
+    border: none;
+    outline: none;
+    background-color: transparent;
+  }
 }
 
 .menu ul {
@@ -142,7 +224,6 @@ header h1 {
 }
 
 .vr {
-  padding: 150px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -150,6 +231,7 @@ header h1 {
       -ms-flex-align: end;
           align-items: flex-end;
   position: relative;
+  padding: 150px 0;
 }
 
 .vr h2 {
@@ -158,20 +240,61 @@ header h1 {
 }
 
 .vr .content {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
   max-width: 530px;
   background: white;
   position: absolute;
   right: 0px;
-  padding-left: 80px;
-  padding-top: 80px;
+  padding: 80px 0 0 80px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .vr .content {
+    padding: 30px 0 0 30px;
+  }
 }
 
 .vr .content p {
   color: #8c8c8c;
   line-height: 26px;
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .vr {
+    display: block;
+    position: static;
+    text-align: center;
+    max-width: calc(100% - 80px);
+    margin: 0 auto;
+  }
+  .vr h2 {
+    font-size: 36px;
+  }
+  .vr .content {
+    max-width: 300px;
+    position: static;
+    right: auto;
+    margin: 0 auto;
+    padding: 80px 0 0 0;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .vr {
+    display: block;
+    position: static;
+    text-align: center;
+    max-width: calc(100% - 80px);
+  }
+  .vr h2 {
+    font-size: 36px;
+  }
+  .vr .content {
+    max-width: 300px;
+    position: static;
+    right: auto;
+    margin: 0 auto;
+    padding: 80px 0 0 0;
+  }
 }
 
 .creations .tittle {
@@ -206,6 +329,32 @@ header h1 {
   color: white;
   -webkit-transition: background .3s;
   transition: background .3s;
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .creations .tittle {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .creations .tittle h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .creations .tittle {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .creations .tittle h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
 }
 
 .creations .content .item-1 {
@@ -355,6 +504,28 @@ header h1 {
       flex-wrap: wrap;
 }
 
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .creations .content nav {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .creations .content nav a {
+    margin: 24px 12px 0 12px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .creations .content nav {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .creations .content nav a {
+    margin: 24px 12px 0 12px;
+  }
+}
+
 .creations .content a {
   display: block;
   width: 256px;
@@ -367,6 +538,31 @@ header h1 {
       -ms-flex-align: end;
           align-items: flex-end;
   padding: 30px 35px;
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .creations .content a {
+    width: calc(100% - 80px);
+    height: 170px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .creations .content a h3 {
+    max-width: 250px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .creations .content a {
+    width: calc(100% - 80px);
+    height: 170px;
+    padding: 20px 25px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .creations .content a h3 {
+    max-width: 250px;
+  }
 }
 
 .creations .content h3 {
@@ -438,6 +634,42 @@ footer .container .f-2 li {
 
 footer .container .f-2 p {
   color: dimgray;
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  footer .container {
+    display: block;
+  }
+  footer .container .f-1, footer .container .f-2 {
+    display: block;
+    text-align: center;
+  }
+  footer .container .f-1 .logo img {
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+  footer .container .f-2 ul {
+    display: block;
+    margin: 20px 0 30px 0;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  footer .container {
+    display: block;
+  }
+  footer .container .f-1, footer .container .f-2 {
+    display: block;
+    text-align: center;
+  }
+  footer .container .f-1 .logo img {
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+  footer .container .f-2 ul {
+    display: block;
+    margin: 20px 0 30px 0;
+  }
 }
 
 .attribution {
