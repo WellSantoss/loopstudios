@@ -39,6 +39,11 @@ a {
   text-decoration: none;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+}
+
 ol, ul {
   list-style: none;
 }
@@ -64,8 +69,14 @@ body {
 }
 
 .container {
-  max-width: 1100px;
+  max-width: 1140px;
+  padding: 0 20px;
   margin: 0 auto;
+}
+
+h1, h2 {
+  font-family: 'Josefin Sans', sans-serif;
+  text-transform: uppercase;
 }
 
 header {
@@ -77,8 +88,6 @@ header {
 
 header h1 {
   display: inline-block;
-  font-family: 'Josefin Sans', sans-serif;
-  text-transform: uppercase;
   font-size: 72px;
   color: white;
   border: 2px solid white;
@@ -112,6 +121,323 @@ header h1 {
 .menu ul li a {
   padding: 5px 10px;
   color: white;
+  display: inline-block;
+}
+
+.menu ul li a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: white;
+  -webkit-transition: width .3s;
+  transition: width .3s;
+  margin: 10px auto 0 auto;
+}
+
+.menu ul li a:hover::after {
+  width: 25px;
+  -webkit-transition: width .3s;
+  transition: width .3s;
+}
+
+.vr {
+  padding: 150px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  position: relative;
+}
+
+.vr h2 {
+  font-size: 48px;
+  margin-bottom: 25px;
+}
+
+.vr .content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  max-width: 530px;
+  background: white;
+  position: absolute;
+  right: 0px;
+  padding-left: 80px;
+  padding-top: 80px;
+}
+
+.vr .content p {
+  color: #8c8c8c;
+  line-height: 26px;
+}
+
+.creations .tittle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 50px;
+}
+
+.creations .tittle h2 {
+  font-size: 48px;
+}
+
+.creations .tittle a {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: black;
+  border: 2px solid black;
+  padding: 15px 30px;
+  -webkit-transition: background .3s;
+  transition: background .3s;
+}
+
+.creations .tittle a:hover {
+  background: black;
+  color: white;
+  -webkit-transition: background .3s;
+  transition: background .3s;
+}
+
+.creations .content .item-1 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url("../images/desktop/image-1.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/desktop/image-1.jpg");
+  background-size: cover;
+}
+
+.creations .content .item-1:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.6)), to(rgba(255, 255, 255, 0.6))), url("../images/desktop/image-1.jpg");
+  background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("../images/desktop/image-1.jpg");
+}
+
+.creations .content .item-1:hover h3 {
+  color: black;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.creations .content .item-2 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url("../images/desktop/image-2.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/desktop/image-2.jpg");
+  background-size: cover;
+}
+
+.creations .content .item-2:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.6)), to(rgba(255, 255, 255, 0.6))), url("../images/desktop/image-2.jpg");
+  background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("../images/desktop/image-2.jpg");
+}
+
+.creations .content .item-2:hover h3 {
+  color: black;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.creations .content .item-3 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url("../images/desktop/image-3.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/desktop/image-3.jpg");
+  background-size: cover;
+}
+
+.creations .content .item-3:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.6)), to(rgba(255, 255, 255, 0.6))), url("../images/desktop/image-3.jpg");
+  background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("../images/desktop/image-3.jpg");
+}
+
+.creations .content .item-3:hover h3 {
+  color: black;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.creations .content .item-4 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url("../images/desktop/image-4.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/desktop/image-4.jpg");
+  background-size: cover;
+}
+
+.creations .content .item-4:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.6)), to(rgba(255, 255, 255, 0.6))), url("../images/desktop/image-4.jpg");
+  background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("../images/desktop/image-4.jpg");
+}
+
+.creations .content .item-4:hover h3 {
+  color: black;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.creations .content .item-5 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url("../images/desktop/image-5.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/desktop/image-5.jpg");
+  background-size: cover;
+}
+
+.creations .content .item-5:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.6)), to(rgba(255, 255, 255, 0.6))), url("../images/desktop/image-5.jpg");
+  background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("../images/desktop/image-5.jpg");
+}
+
+.creations .content .item-5:hover h3 {
+  color: black;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.creations .content .item-6 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url("../images/desktop/image-6.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/desktop/image-6.jpg");
+  background-size: cover;
+}
+
+.creations .content .item-6:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.6)), to(rgba(255, 255, 255, 0.6))), url("../images/desktop/image-6.jpg");
+  background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("../images/desktop/image-6.jpg");
+}
+
+.creations .content .item-6:hover h3 {
+  color: black;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.creations .content .item-7 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url("../images/desktop/image-7.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/desktop/image-7.jpg");
+  background-size: cover;
+}
+
+.creations .content .item-7:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.6)), to(rgba(255, 255, 255, 0.6))), url("../images/desktop/image-7.jpg");
+  background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("../images/desktop/image-7.jpg");
+}
+
+.creations .content .item-7:hover h3 {
+  color: black;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.creations .content .item-8 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url("../images/desktop/image-8.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/desktop/image-8.jpg");
+  background-size: cover;
+}
+
+.creations .content .item-8:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.6)), to(rgba(255, 255, 255, 0.6))), url("../images/desktop/image-8.jpg");
+  background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url("../images/desktop/image-8.jpg");
+}
+
+.creations .content .item-8:hover h3 {
+  color: black;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.creations .content nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.creations .content a {
+  display: block;
+  width: 256px;
+  height: 450px;
+  margin: 24px 2px 0 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding: 30px 35px;
+}
+
+.creations .content h3 {
+  font-family: 'Josefin Sans', sans-serif;
+  color: white;
+  font-size: 36px;
+  text-transform: uppercase;
+}
+
+footer {
+  background: black;
+  margin-top: 200px;
+  color: white;
+  padding: 40px 0;
+}
+
+footer .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer .container .f-1, footer .container .f-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .container .f-1 {
+  margin-bottom: 20px;
+}
+
+footer .container .f-1 a {
+  margin-left: 10px;
+  display: inline-block;
+}
+
+footer .container .f-1 a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: white;
+  -webkit-transition: width .3s;
+  transition: width .3s;
+  margin: 10px auto 0 auto;
+}
+
+footer .container .f-1 a:hover::after {
+  width: 23px;
+  -webkit-transition: width .3s;
+  transition: width .3s;
+}
+
+footer .container .f-2 li {
+  margin-left: 0px;
+  margin-right: 10px;
+}
+
+footer .container .f-2 p {
+  color: dimgray;
 }
 
 .attribution {
