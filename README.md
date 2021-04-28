@@ -14,7 +14,6 @@ Resultado final: https://wellsantoss.github.io/loopstudios/
 ---
 
 ## Tecnologias utilizadas
-Utilizei as seguintes tecnologias durante desenvolvimento:
 - HTML5;
-- SASS - Pré-processador CSS;
+- SASS/CSS;
 - JavaScript;
